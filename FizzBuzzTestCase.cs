@@ -8,7 +8,7 @@ namespace learn_tdd_fizzbuzz
     public void Test_Something()
     {
       var fizzbuzz = new FizzBuzz();
-      Assert.NotEmpty(fizzbuzz);
+      Assert.NotNull(fizzbuzz);
     }
   }
 }
