@@ -28,35 +28,45 @@ namespace learn_tdd_fizzbuzz
     public void Test_Number_One_Is_Listed_As_Itself()
     {
       var numbers = _fizzBuzz.Generate();
-      Assert.Equal("1", numbers[0]);
+      AssertSameNumber(numbers, 1);
     }
 
     [Fact]
     public void Test_Number_Two_Is_Listed_As_Itself()
     {
       var numbers = _fizzBuzz.Generate();
-      Assert.Equal("2", numbers[1]);
+      AssertSameNumber(numbers, 2);
     }
 
     [Fact]
     public void Test_Number_Four_Is_Listed_As_Itself()
     {
       var numbers = _fizzBuzz.Generate();
-      Assert.Equal("4", numbers[3]);
+      AssertSameNumber(numbers, 4);
     }
 
     [Fact]
     public void Test_Number_Three_Is_Listed_As_Fizz()
     {
       var numbers = _fizzBuzz.Generate();
-      Assert.Equal("Fizz", numbers[2]);
+      AssertFizz(numbers, 3);
     }
 
     [Fact]
     public void Test_Multiples_Of_Three_Are_Listed_As_Fizz()
     {
       var numbers = _fizzBuzz.Generate();
-      Assert.Equal("Fizz", numbers[5]);
+      AssertFizz(numbers, 6);
+    }
+
+    private void AssertSameNumber(string[] numbers, int number)
+    {
+      Assert.Equal(number.ToString(), numbers[number - 1]);
+    }
+
+    private void AssertFizz(string[] numbers, int number)
+    {
+      Assert.Equal("Fizz", numbers[number - 1]);
     }
   }
 }
