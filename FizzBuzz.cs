@@ -8,7 +8,9 @@ namespace learn_tdd_fizzbuzz
 
     public string[] Generate()
     {
-      return new string[100];
+      var numbers = new string[100];
+      numbers[0] = "1";
+      return numbers;
     }
   }
 }
