@@ -10,6 +10,7 @@ namespace learn_tdd_fizzbuzz
     {
       var numbers = new string[100];
       numbers[0] = "1";
+      numbers[1] = "2";
       return numbers;
     }
   }
