@@ -37,5 +37,12 @@ namespace learn_tdd_fizzbuzz
       var numbers = _fizzBuzz.Generate();
       Assert.Equal("2", numbers[1]);
     }
+
+    [Fact]
+    public void Test_Number_Four_Is_Listed_As_Itself()
+    {
+      var numbers = _fizzBuzz.Generate();
+      Assert.Equal("4", numbers[3]);
+    }
   }
 }
