@@ -9,9 +9,10 @@ namespace learn_tdd_fizzbuzz
     public string[] Generate()
     {
       var numbers = new string[100];
-      numbers[0] = "1";
-      numbers[1] = "2";
-      numbers[3] = "4";
+      for (var index = 0; index < numbers.Length; index++)
+      {
+        numbers[index] = $"{index + 1}";
+      }
       return numbers;
     }
   }
