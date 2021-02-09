@@ -12,7 +12,7 @@ namespace learn_tdd_fizzbuzz
       var numbers = new List<string>();
       foreach (var currentNumber in Enumerable.Range(1, ELEMENTS_LENGTH))
       {
-        if (currentNumber == 3)
+        if (currentNumber % 3 == 0)
         {
           numbers.Add("Fizz");
           continue;
