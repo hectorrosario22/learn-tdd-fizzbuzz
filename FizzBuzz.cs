@@ -6,9 +6,9 @@ namespace learn_tdd_fizzbuzz
   {
     private const int ELEMENTS_LENGTH = 100;
 
-    public object[] Generate()
+    public string[] Generate()
     {
-      return new object[100];
+      return new string[100];
     }
   }
 }
