@@ -44,5 +44,12 @@ namespace learn_tdd_fizzbuzz
       var numbers = _fizzBuzz.Generate();
       Assert.Equal("4", numbers[3]);
     }
+
+    [Fact]
+    public void Test_Number_Three_Is_Listed_As_Fizz()
+    {
+      var numbers = _fizzBuzz.Generate();
+      Assert.Equal("Fizz", numbers[2]);
+    }
   }
 }
