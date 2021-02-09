@@ -51,5 +51,12 @@ namespace learn_tdd_fizzbuzz
       var numbers = _fizzBuzz.Generate();
       Assert.Equal("Fizz", numbers[2]);
     }
+
+    [Fact]
+    public void Test_Multiples_Of_Three_Are_Listed_As_Fizz()
+    {
+      var numbers = _fizzBuzz.Generate();
+      Assert.Equal("Fizz", numbers[5]);
+    }
   }
 }
