@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Linq;
 
 namespace learn_tdd_fizzbuzz
@@ -8,18 +9,18 @@ namespace learn_tdd_fizzbuzz
 
     public string[] Generate()
     {
-      var numbers = new string[100];
-      for (var index = 0; index < numbers.Length; index++)
+      var numbers = new List<string>();
+      foreach (var currentNumber in Enumerable.Range(1, ELEMENTS_LENGTH))
       {
-        if ((index + 1) == 3)
+        if (currentNumber == 3)
         {
-          numbers[index] = "Fizz";
+          numbers.Add("Fizz");
           continue;
         }
 
-        numbers[index] = $"{index + 1}";
+        numbers.Add(currentNumber.ToString());
       }
-      return numbers;
+      return numbers.ToArray();
     }
   }
 }
