@@ -4,18 +4,23 @@ namespace learn_tdd_fizzbuzz
 {
   public class FizzBuzzTestCase
   {
+    private readonly FizzBuzz _fizzBuzz;
+
+    public FizzBuzzTestCase()
+    {
+      _fizzBuzz = new FizzBuzz();
+    }
+
     [Fact]
     public void Test_Can_Instantiate()
     {
-      var fizzbuzz = new FizzBuzz();
-      Assert.NotNull(fizzbuzz);
+      Assert.NotNull(_fizzBuzz);
     }
 
     [Fact]
     public void Test_Generate_List_Of_100_Elements()
     {
-      var fizzbuzz = new FizzBuzz();
-      var numbers = fizzbuzz.Generate();
+      var numbers = _fizzBuzz.Generate();
       Assert.Equal(100, numbers.Length);
     }
   }
