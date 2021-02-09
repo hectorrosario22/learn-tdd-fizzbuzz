@@ -6,9 +6,9 @@ namespace learn_tdd_fizzbuzz
   {
     private const int ELEMENTS_LENGTH = 100;
 
-    public int[] Generate()
+    public object[] Generate()
     {
-      return Enumerable.Range(0, ELEMENTS_LENGTH).ToArray();
+      return new object[100];
     }
   }
 }
